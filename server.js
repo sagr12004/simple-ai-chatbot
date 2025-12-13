@@ -238,33 +238,12 @@ app.post("/api/chat", async (req, res) => {
 });
 
 // ---------- Start server ----------
-async function startServer(startPort = START_PORT, maxAttempts = 10) {
-  let port = startPort;
-  for (let i = 0; i < maxAttempts; i++) {
-    try {
-      await new Promise((resolve, reject) => {
-        const server = app.listen(port, () => {
-          console.log(`AI Chatbot server running on port ${port} — ${GEMINI_KEY ? "Gemini key detected" : "Gemini key NOT set"}`);
-          resolve();
-        });
-        server.on("error", (err) => reject(err));
-      });
-      return;
-    } catch (err) {
-      if (err && err.code === "EADDRINUSE") {
-        console.warn(`Port ${port} in use, trying ${port + 1}`);
-        port += 1;
-        continue;
-      } else {
-        console.error("Server start error:", err);
-        throw err;
-      }
-    }
-  }
-  throw new Error("Unable to start server after multiple port attempts.");
-}
+const PORT = process.env.PORT || 8000;
 
-startServer().catch(err => {
-  console.error("Failed to start server:", err);
-  process.exit(1);
+app.listen(PORT, () => {
+  console.log(
+    `AI Chatbot server running on port ${PORT} — ${
+      GEMINI_KEY ? "Gemini key detected" : "Gemini key NOT set"
+    }`
+  );
 });
