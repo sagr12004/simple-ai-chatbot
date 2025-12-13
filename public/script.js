@@ -250,7 +250,7 @@ async function sendMessage(text) {
   messagesEl.scrollTop = messagesEl.scrollHeight;
 
   try {
-    const resp = await fetch("/api/chat", {
+    const resp = await fetch("https://sagar-ai-chatbot-backend.onrender.com/api/chat", {
       method: "POST",
       headers: { "Content-Type":"application/json" },
       body: JSON.stringify({ message: text, history: buildHistoryForServer() })
