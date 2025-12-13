@@ -1,5 +1,11 @@
 
 # 🤖 Simple AI Chatbot
+ ## 🌐 Live Demo
+
+🔗 **Live Website:** [sagar-ai-chatbot.netlify.app](https://sagar-ai-chatbot.netlify.app)
+>
+(Backend is hosted on Render and frontend is deployed on Netlify).
+
 
 A beginner-friendly **AI Chatbot** built using **Node.js, Express, and Google Gemini API**, with a modern cyber-style frontend.  
 This project demonstrates how to connect a frontend chat interface with an AI backend and is ideal for learning full-stack fundamentals.
@@ -96,15 +102,6 @@ node server.js
 
 ---
 
-### 5️⃣ Open in browser
-
-Visit:
-
-```
-http://localhost:8000
-```
-
-(Port may vary based on your configuration)
 
 ---
 
