@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sagar’s AI Chatbot</title>
+
+  <!-- jsPDF for PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<!-- TERMINAL BOOT INTRO -->
+<div id="boot-screen">
+  <div class="boot-line">Initializing system...</div>
+  <div class="boot-line">Loading neural core...</div>
+  <div class="boot-line">Starting matrix engine...</div>
+  <div class="boot-line">Establishing secure connection...</div>
+  <div class="boot-line final">Chatbot online.</div>
+</div>
+
+<!-- MATRIX BACKGROUND -->
+<canvas id="matrix"></canvas>
+
+<!-- CURSOR LIGHT TRAIL -->
+<div id="cursor-trail"></div>
+
+<!-- HEADER -->
+<header class="creator-header hidden">
+  <h5>Created by <span>SAGAR S S</span> ❤️</h5>
+</header>
+
+<!-- AI AVATAR -->
+<div class="ai-orb-container hidden">
+  <div class="ai-orb" title="AI Core"></div>
+</div>
+
+<!-- CHATBOT WRAPPER -->
+<div class="chat-wrapper hidden">
+  <div class="chat-container glass">
+    <div class="topbar">
+      <div class="title-group">
+        <h1 class="chat-title cyber-glow">AI Chatbot</h1>
+        <p class="provider-label">Provider: <span id="provider">detecting...</span></p>
+      </div>
+
+      <div class="controls">
+        <button id="micBtn" class="icon-btn" title="Voice input (microphone)">
+          🎤
+        </button>
+
+        <button id="voiceToggleBtn" class="icon-btn" title="Toggle voice output (assistant speaks)">
+          🔈
+        </button>
+
+        <button id="exportPdfBtn" class="icon-btn" title="Export chat to PDF">
+          ⬇️
+        </button>
+      </div>
+    </div>
+
+    <div id="messages" class="messages" aria-live="polite"></div>
+
+    <form id="chat-form" class="chat-form" autocomplete="off">
+      <input id="input" type="text" placeholder="Type your message..." autocomplete="off" />
+      <button id="sendBtn" class="ripple-btn">Send</button>
+    </form>
+
+    <div class="bottom-actions">
+      <button id="clearBtn" class="clear-btn ripple-btn">Clear Chat</button>
+      <div class="voice-info" id="voiceInfo" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="creator-footer glass hidden">
+  <p>Made with ❤️ by <strong>SAGAR S S</strong></p>
+
+  <div class="footer-icons">
+    <a href="https://github.com/sagr12004" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/sagarssavadatti2004" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>
